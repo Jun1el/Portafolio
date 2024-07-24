@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --fuente--primaria:"Montserrat", sans-serif;
+    --fuente--secundaria:"Krona One", sans-serif;
+}
+body {
+    background-color: #262626;
+    color: white;
+    box-sizing: border-box;
+}   
+.header{
+    padding: 2% 0% 0% 10%;
+}
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+.header_menu_link{
+    font-family: var(--fuente--primaria);
+    font-size: 20px;
+    font-weight: 400;   
+    color:#D7F205 ;
+    text-decoration: none;
+}
+.titulo-nombre {
+    color: #F2E205;
+}
+.presentacion {
+    display: flex;
+    align-items: center;
+    padding: 4% 10%;
+    justify-content: space-between;
+}
+
+.presentacion_contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.presentacion_contenido_titulo {
+    font-size: 35px;
+    font-family: "Krona One", sans-serif;
+}
+
+.presentacion_contenido_descripcion {
+    font-size: 24px; /* Asegurando el tamaño del párrafo */
+    font-family: "Montserrat", sans-serif;
+}
+.presentacion_enlaces{
+    display: flex;
+    justify-content:space-between ;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+/*Comentario*/
+.presentacion_enlaces_link{
+    border: 2px solid white;
+    margin: 4px;
+    padding: 10px 0;
+    color: #D7F205;
+    width: 50%;
+    text-align: center;
+    border-radius: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.presentacion_enlaces_link:hover{
+    border: 2px solid #D7F205;
+    cursor: pointer;
+    background-color:gray;
+}
+.imagen_andres{
+    width: 25%;
+}
+.presentacion_enlaces_subtitulo{
+    font-family: "Krona One", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.imagen_linkedin {
+    width: 24px;    
+    height: 24px;   
+}
+.imagen_github{
+    width: 24px;    
+    height: 24px;  
+}
+.footer{
+    padding: 10px;
+    text-align: center;
+    background-color: #D7F205;
+    color: #262626;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+@media (max-width: 1000px){
+    .header{
+
+        padding: 5%;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion_contenido{
+        width: auto;
+    }
+}
