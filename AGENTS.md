@@ -8,14 +8,17 @@
 
 ## Email Configuration (Contact Form)
 
-The contact form (`ServicioEmailGmail`) requires SMTP credentials via **user-secrets**:
+Emails are sent via **Resend** (HTTP API, not SMTP — SMTP is blocked by Render).
 
+### Local development (user-secrets)
 ```
-dotnet user-secrets set "CONFIGURACIONES_EMAIL:EMAIL" "<email>" --project Portafolio
-dotnet user-secrets set "CONFIGURACIONES_EMAIL:PASSWORD" "<app-password>" --project Portafolio
+dotnet user-secrets set "CONFIGURACIONES_EMAIL:RESEND_APITOKEN" "re_xxx" --project Portafolio
 ```
 
-HOST (`smtp.gmail.com`) and PUERTO (`587`) are already in `appsettings.json`.
+### Production (Render env vars)
+- `CONFIGURACIONES_EMAIL__RESEND_APITOKEN` — your Resend API key (`re_xxx`)
+
+`FROM` (`onboarding@resend.dev`) and `TO` are already in `appsettings.json`.
 
 ## Deploy (Render)
 

@@ -7,4 +7,8 @@
     <UserSecretsId>9c1e20ef-aeb9-4f3f-a7ef-53008473c0ca</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Resend" Version="0.5.1" />
+  </ItemGroup>
+
 </Project>

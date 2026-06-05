@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.HttpOverrides;
 using Portafolio.Servicios;
+using Resend;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IRepositoryProjects, RepositoryProjects>();
 builder.Services.AddTransient<IServicioEmail, ServicioEmailGmail>();
+
+builder.Services.AddHttpClient<ResendClient>();
+builder.Services.Configure<ResendClientOptions>(o =>
+{
+    o.ApiToken = builder.Configuration.GetValue<string>("CONFIGURACIONES_EMAIL:RESEND_APITOKEN")!;
+});
+builder.Services.AddTransient<IResend, ResendClient>();
 
 var app = builder.Build();
 
