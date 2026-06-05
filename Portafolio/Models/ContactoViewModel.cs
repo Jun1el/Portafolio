@@ -6,8 +6,8 @@ namespace Portafolio.Models
     {
         public string Nombre { get; set; }
         public string Email { get; set; }
-        [RegularExpression(@"^\d{9}$", ErrorMessage = "El teléfono debe tener 9 dígitos.")]
-        public int Numero { get; set; }
+        [RegularExpression(@"^\d{9,12}$", ErrorMessage = "El teléfono debe tener entre 9 y 12 dígitos.")]
+        public string Numero { get; set; }
         public string Mensaje { get; set; }
 
     }
