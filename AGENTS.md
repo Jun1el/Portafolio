@@ -15,7 +15,13 @@ dotnet user-secrets set "CONFIGURACIONES_EMAIL:EMAIL" "<email>" --project Portaf
 dotnet user-secrets set "CONFIGURACIONES_EMAIL:PASSWORD" "<app-password>" --project Portafolio
 ```
 
-HOST (`smtp.gmail.com`) and PUERTO (`587`) are already in `appsettings.Development.json`.
+HOST (`smtp.gmail.com`) and PUERTO (`587`) are already in `appsettings.json`.
+
+## Deploy (Render)
+
+- Runtime: **Docker** (Dockerfile at repo root)
+- Required env vars on Render: `CONFIGURACIONES_EMAIL__EMAIL`, `CONFIGURACIONES_EMAIL__PASSWORD`
+- `Program.cs` reads `PORT` env var and uses `ForwardedHeaders` for Render's proxy
 
 ## Conventions
 
