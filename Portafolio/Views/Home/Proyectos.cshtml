@@ -1,0 +1,40 @@
+@model IEnumerable<Portafolio.Models.Proyecto>
+
+@{
+	ViewData["Title"] = "Proyectos";
+}
+
+<section class="proyectos-section">
+	<div class="container">
+		<div class="proyectos-header">
+			<h1 class="proyectos-header__title">Mis Proyectos</h1>
+			<p class="proyectos-header__subtitle">Una selección de proyectos en los que he trabajado, desde scripts personalizados hasta aplicaciones completas.</p>
+			<div class="proyectos-header__divider"></div>
+		</div>
+
+		@if (Model != null && Model.Any())
+		{
+			<div class="proyectos-grid">
+				@foreach (var proyecto in Model)
+				{
+					<div class="proyecto-card">
+						<div class="proyecto-card__image-wrapper">
+							<img src="@proyecto.ImgURL" class="proyecto-card__image" alt="@proyecto.Titulo" />
+							<div class="proyecto-card__image-overlay"></div>
+						</div>
+						<div class="proyecto-card__body">
+							<h3 class="proyecto-card__title">@proyecto.Titulo</h3>
+							<p class="proyecto-card__description">@proyecto.Descripcion</p>
+							<a href="@proyecto.Link" class="proyecto-card__link" target="_blank" rel="noreferrer noopener">
+								Ver Proyecto
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				}
+			</div>
+		}
+	</div>
+</section>

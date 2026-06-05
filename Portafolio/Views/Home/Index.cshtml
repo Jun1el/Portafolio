@@ -1,0 +1,12 @@
+﻿
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<partial name="_Presentacion" model="Model" />
+
+<partial name="_Habilidades" model="Model" />
+
+<div class="home-cta">
+	<a asp-controller="Home" asp-action="Proyectos" class="btn-premium">Ver todos los proyectos</a>
+</div>

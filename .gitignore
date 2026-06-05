@@ -1,0 +1,70 @@
+# Archivos de compilación y salida (Build Results)
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Bb]uild/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Archivos temporales generados por el entorno de desarrollo (Visual Studio, ReSharper, etc.)
+_ReSharper.*/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.FileListAbsolute.txt
+*.vssscc
+*.vspscc
+*.vsidx
+*.vsd
+*.vcz
+*.opendb
+*.VC.db
+*.VC.opendb
+*.db
+*.suo
+[Tt]humbs.db
+[Dd]esktop.ini
+$tf/
+*.tss
+*.pyc
+
+# Directorios de paquetes de NuGet
+packages/
+!packages/repositories.config
+*.nupkg
+
+# Resultados de pruebas y cobertura
+TestResults/
+[Dd]ebug[Tt]est/
+[Rr]elease[Tt]est/
+*.coverage
+*.coveragexml
+
+# Archivos de análisis estático
+StyleCopReport.xml
+*.DotSettings.user
+
+# Paquetes y dependencias frontend (si usas Node / Bower)
+node_modules/
+bower_components/
+jspm_packages/
+
+# Carpeta de publicación predeterminada de Visual Studio
+[Pp]ublish/
+[Pp]ublished/
+
+# Archivos de configuración locales que no deben subirse al repositorio
+*.pubxml
+*.userosscache
+*.pfx
+*.snk
