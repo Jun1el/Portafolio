@@ -15,6 +15,7 @@ bld/
 [Ll]ogs/
 
 # Archivos temporales generados por el entorno de desarrollo (Visual Studio, ReSharper, etc.)
+.vs/
 _ReSharper.*/
 *.rsuser
 *.suo
