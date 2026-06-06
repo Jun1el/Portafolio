@@ -4,11 +4,11 @@ namespace Portafolio.Servicios
 {
     public interface IRepositoryProjects
     {
-        List<Proyecto> ObtenerProyecto();
+        IEnumerable<Proyecto> ObtenerProyecto();
     }
     public class RepositoryProjects : IRepositoryProjects
     {
-        public List<Proyecto> ObtenerProyecto()
+        public IEnumerable<Proyecto> ObtenerProyecto()
         {
             return new List<Proyecto> {
                 new Proyecto {

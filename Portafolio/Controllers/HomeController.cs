@@ -9,13 +9,13 @@ namespace Portafolio.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IRepositoryProjects _repositoryProjects;
-        private readonly IServicioEmail servicioEmail;
+        private readonly IServicioEmail _servicioEmail;
 
         public HomeController(ILogger<HomeController> logger, IRepositoryProjects repositoryProjects, IServicioEmail servicioEmail)
         {
             _logger = logger;
             _repositoryProjects = repositoryProjects;
-            this.servicioEmail = servicioEmail;
+            _servicioEmail = servicioEmail;
         }
 
         public IActionResult Index()
@@ -38,8 +38,19 @@ namespace Portafolio.Controllers
         [HttpPost]
         public async Task<IActionResult> Contacto(ContactoViewModel contactoViewModel)
         {
-            await servicioEmail.Enviar(contactoViewModel);
-            return RedirectToAction("Gracias");
+            if (!ModelState.IsValid)
+                return View(contactoViewModel);
+
+            try
+            {
+                await _servicioEmail.Enviar(contactoViewModel);
+                return RedirectToAction("Gracias");
+            }
+            catch
+            {
+                ModelState.AddModelError("", "Ocurrió un error al enviar el mensaje. Intenta nuevamente.");
+                return View(contactoViewModel);
+            }
         }
 
 
