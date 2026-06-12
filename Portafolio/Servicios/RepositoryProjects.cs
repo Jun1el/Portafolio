@@ -32,8 +32,8 @@ namespace Portafolio.Servicios
                 new Proyecto {
                     Titulo = "WEB-FC - Portal de Quejas y Noticias",
                     Descripcion = "Desarrollo web para la gestión de quejas y noticias de la Facultad de Ciencias de la Computación" ,
-                    Link ="https://github.com/Jun1el/WEB-FC",
-                    ImgURL="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Uni-logo_transparente_granate.png/250px-Uni-logo_transparente_granate.png"
+                    Link ="https://web-fc.onrender.com/",
+                    ImgURL="https://fc.uni.edu.pe/wp-content/uploads/2021/05/imagen-defecto-min.jpg"
                 },
             };
         }
